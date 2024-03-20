@@ -1,0 +1,10 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#sensorData {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}

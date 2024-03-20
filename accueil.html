@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon Site Web</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Mon Site Web</h1>
+    <div id="sensorData">
+        <!-- Les données des capteurs seront affichées ici -->
+    </div>
+</body>
+</html>
+<script>
+    function updateSensorData(temperature, luminosite) {
+        var sensorDataDiv = document.getElementById("sensorData");
+        sensorDataDiv.innerHTML = "<p>Température : " + temperature + "°C</p><p>Luminosité : " + luminosite + " lux</p>";
+    }
+</script>
