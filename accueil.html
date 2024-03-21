@@ -27,6 +27,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .data:hover {
             transform: translateY(-5px);
@@ -41,26 +46,39 @@
             font-size: 20px;
             margin: 0;
         }
+        h2, p {
+            margin: 0;
+        }
+        .data-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="data">
+            <span class="data-icon">%</span>
             <h2>Humidité</h2>
             <p>13%</p>
         </div>
         <div class="data">
+            <span class="data-icon">🏭</span>
             <h2>Pollution</h2>
             <p>L'air est actuellement peu pollué!</p>
         </div>
         <div class="data">
+            <span class="data-icon">°C</span>
             <h2>Température</h2>
             <p>22°C</p>
         </div>
         <div class="data">
+            <span class="data-icon">🌬</span>
             <h2>Vitesse du vent</h2>
             <p>15 km/h</p>
         </div>
     </div>
 </body>
 </html>
+
