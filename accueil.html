@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Mon Site Web</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Données météo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .data {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Mon Site Web</h1>
-    <div id="sensorData">
-        <!-- Les données des capteurs seront affichées ici -->
+    <div class="container">
+        <div class="data">
+            <h2>Humidité</h2>
+            <p>65%</p>
+        </div>
+        <div class="data">
+            <h2>Pollution</h2>
+            <p>30 AQI</p>
+        </div>
+        <div class="data">
+            <h2>Température</h2>
+            <p>22°C</p>
+        </div>
+        <div class="data">
+            <h2>Vitesse du vent</h2>
+            <p>15 km/h</p>
+        </div>
     </div>
 </body>
 </html>
-<script>
-    function updateSensorData(temperature, luminosite) {
-        var sensorDataDiv = document.getElementById("sensorData");
-        sensorDataDiv.innerHTML = "<p>Température : " + temperature + "°C</p><p>Luminosité : " + luminosite + " lux</p>";
-    }
-</script>
