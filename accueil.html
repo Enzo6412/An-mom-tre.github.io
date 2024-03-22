@@ -5,60 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet SAE - Données météo</title>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .data {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            width: 200px;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .data:hover {
-            transform: translateY(-5px);
-        }
-        h2 {
-            color: #343a40;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #6c757d;
-            font-size: 20px;
-            margin: 0;
-        }
-        h2, p {
-            margin: 0;
-        }
-        .data-icon {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #007bff;
-        }
-        .project-description {
-            font-style: italic;
-            color: #6c757d;
-            margin-top: 20px;
-        }
+        /* Votre CSS ici */
     </style>
 </head>
 <body>
@@ -73,10 +20,10 @@
             <h2>Pollution</h2>
             <p>L'air est actuellement peu pollué!</p>
         </div>
-        <div class="data">
+        <div class="data" id="temperature-data"> <!-- Ajoutez un ID pour cibler cet élément -->
             <span class="data-icon">°C</span>
             <h2>Température</h2>
-            <p>21°C</p>
+            <p id="temperature">21°C</p> <!-- Ajoutez un ID pour cibler cet élément -->
         </div>
         <div class="data">
             <span class="data-icon">🌬</span>
@@ -87,5 +34,23 @@
     <div class="project-description">
         <p>Projet SAE - GEII3</p>
     </div>
+
+    <script>
+        // Fonction pour changer la température avec un délai
+        function changeTemperature() {
+            setTimeout(function() {
+                // Modifier la température ici
+                var newTemperature = Math.floor(Math.random() * 20) + 15; // Génère une nouvelle température entre 15°C et 35°C
+                document.getElementById("temperature").textContent = newTemperature + "°C";
+                
+                // Appeler la fonction de nouveau après un délai spécifié
+                changeTemperature();
+            }, 5000); // Définissez le délai en millisecondes (ici 5000 ms = 5 secondes)
+        }
+
+        // Appeler la fonction pour la première fois
+        changeTemperature();
+    </script>
 </body>
 </html>
+
